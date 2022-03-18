@@ -69,7 +69,7 @@ jobs:
           working-directory: .rhino/node # Created by earlier commands which use Node.js
           start: yarn run-app
           project: root/tests
-          browser: chromium
+          #browser: chromium
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
