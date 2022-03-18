@@ -8,6 +8,8 @@ box::use(
 
 test_that("main server works", {
   testServer(server, {
-    expect_equal(output$message, "Hello!")
+    session$setInputs(variable = "gear")
+    tmp <- output$data
+    expect_equal(grep("gear", tmp), 1)
   })
 })
